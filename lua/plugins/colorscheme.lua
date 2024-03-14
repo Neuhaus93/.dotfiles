@@ -29,7 +29,7 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = { style = "moon" },
+    opts = { style = "night" },
     keys = keys(),
   },
   {
@@ -55,11 +55,12 @@ return {
     name = "rose-pine",
     keys = keys(),
   },
-  { "embark-theme/vim", lazy = true, keys = keys() },
   { "AlexvZyl/nordic.nvim", lazy = true, keys = keys() },
   { "rebelot/kanagawa.nvim", lazy = true, keys = keys() },
+  { "rmehri01/onenord.nvim", lazy = true, keys = keys() },
+  { "gbprod/nord.nvim", lazy = true, keys = keys() },
   {
     "LazyVim/LazyVim",
-    opts = { colorscheme = "catppuccin-frappe" },
+    opts = { colorscheme = "tokyonight" },
   },
 }
