@@ -124,3 +124,6 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# keychain manager
+eval $(keychain --eval --agents ssh --quick --quiet)
