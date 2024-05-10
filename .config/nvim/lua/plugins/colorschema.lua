@@ -1,5 +1,3 @@
-local Util = require("lazyvim.util")
-
 local function keys()
   -- stylua: ignore
   local builtins = { "zellner", "torte", "slate", "shine", "ron", "quiet", "peachpuff",
@@ -46,9 +44,39 @@ return {
     keys = keys(),
   },
   {
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+    lazy = true,
+    keys = keys(),
+  },
+  {
+    "Mofiqul/vscode.nvim",
+    name = "vscode",
+    lazy = true,
+    keys = keys(),
+  },
+  {
+    "sainnhe/everforest",
+    name = "everforest",
+    lazy = true,
+    keys = keys(),
+  },
+  {
+    "navarasu/onedark.nvim",
+    name = "onedark",
+    lazy = true,
+    keys = keys(),
+  },
+  {
+    "shaunsingh/nord.nvim",
+    name = "nord",
+    lazy = true,
+    keys = keys(),
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine-moon",
+      colorscheme = "nord",
     },
   },
 }
