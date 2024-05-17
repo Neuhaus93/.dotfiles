@@ -1,8 +1,8 @@
 local function keys()
   -- stylua: ignore
-  local builtins = { "zellner", "torte", "slate", "shine", "ron", "quiet", "peachpuff",
-  "pablo", "murphy", "lunaperche", "koehler", "industry", "evening", "elflord",
-  "desert", "delek", "default", "darkblue", "blue", "morning", "habamax" }
+  local builtins = { "zellner", "torte", "slate", "shine", "ron", "quiet", "peachpuff", "retrobox",
+  "pablo", "murphy", "lunaperche", "koehler", "industry", "evening", "elflord", "zaibatsu",
+  "desert", "delek", "default", "darkblue", "blue", "morning", "habamax", "sorbet", "vim", "wildcharm" }
 
   return {
     {
@@ -56,27 +56,15 @@ return {
     keys = keys(),
   },
   {
-    "sainnhe/everforest",
-    name = "everforest",
-    lazy = true,
-    keys = keys(),
-  },
-  {
     "navarasu/onedark.nvim",
     name = "onedark",
     lazy = true,
     keys = keys(),
   },
   {
-    "shaunsingh/nord.nvim",
-    name = "nord",
-    lazy = true,
-    keys = keys(),
-  },
-  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nord",
+      colorscheme = "onedark",
     },
   },
 }
