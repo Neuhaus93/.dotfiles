@@ -179,9 +179,13 @@ bar {
         position top
 }
 
-# Start google chrome
+# Start Vivaldi
 # use the same password-store as the linux mint password-store
-bindsym $mod+c exec google-chrome --password-store=gnome-libsecret
+# bindsym $mod+c exec google-chrome --password-store=gnome-libsecret
+# Personal
+bindsym $mod+n exec /usr/bin/vivaldi-stable --profile-directory="Default"
+# Work
+bindsym $mod+m exec /usr/bin/vivaldi-stable --profile-directory="Profile 1"
 
 # starts picom compositor
 exec_always --no-startup-id picom -b
