@@ -90,7 +90,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle; resize set 800 720; move position center
 
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
@@ -209,3 +209,8 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip
 
 # Change keyboard layout
 bindsym $mod+space exec --no-startup-id "$HOME/dotfiles/.config/i3/keyboard-layout-switch"
+
+# Default floating mode for specific softwares
+for_window [class="zoom"] floating enable
+for_window [class="zoom" title="Zoom - Free account"] floating disable
+for_window [class="zoom" title="Zoom Meeting"] sticky enable
