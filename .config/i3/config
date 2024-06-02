@@ -90,10 +90,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle; resize set 800 720; move position center
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -190,6 +190,9 @@ bindsym $mod+m exec /usr/bin/vivaldi-stable --profile-directory="Profile 1"
 # starts picom compositor
 exec_always --no-startup-id picom -b
 
+# starts flameshot
+exec_always --no-startup-id /usr/bin/flameshot &
+
 # gaps
 gaps inner 4
 gaps outer 4
@@ -197,20 +200,26 @@ gaps outer 4
 # wallpaper
 exec_always --no-startup-id /usr/bin/feh --bg-scale "$HOME/dotfiles/.config/i3/wallpaper.png"
 
+bindsym Print exec flameshot gui
+
 ###  Screenshots in files
-bindsym Print exec --no-startup-id maim --format=png "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
-bindsym $mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
-bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
+# bindsym Print exec --no-startup-id maim --format=png "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-all.png"
+# bindsym $mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-current.png"
+# bindsym Shift+Print exec --no-startup-id maim --format=png --select "/home/$USER/Pictures/screenshot-$(date -u +'%Y%m%d-%H%M%SZ')-selected.png"
 
 ## Screenshots in clipboards
-bindsym Ctrl+Print exec --no-startup-id maim --format=png | xclip -selection clipboard -t image/png
-bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
+# bindsym Ctrl+Print exec --no-startup-id maim --format=png | xclip -selection clipboard -t image/png
+# bindsym Ctrl+$mod+Print exec --no-startup-id maim --format=png --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+# bindsym Ctrl+Shift+Print exec --no-startup-id maim --format=png --select | xclip -selection clipboard -t image/png
 
 # Change keyboard layout
-bindsym $mod+space exec --no-startup-id "$HOME/dotfiles/.config/i3/keyboard-layout-switch"
+bindsym $mod+p exec --no-startup-id "$HOME/dotfiles/.config/i3/keyboard-layout-switch"
+
+bindsym $mod+Shift+Return exec kitty --class floating_term
 
 # Default floating mode for specific softwares
 for_window [class="zoom"] floating enable
 for_window [class="zoom" title="Zoom - Free account"] floating disable
 for_window [class="zoom" title="Zoom Meeting"] sticky enable
+for_window [class="Xviewer"] floating enable, resize set 1180 900, move position center
+for_window [class="floating_term"] floating enable, resize set 680 420, move position center
