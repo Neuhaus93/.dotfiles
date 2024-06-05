@@ -137,3 +137,6 @@ esac
 # pnpm end
 
 . "$HOME/.cargo/env"
+
+alias vi="/opt/nvim-linux64/bin/nvim"
+alias vim="/usr/bin/vi"
