@@ -62,9 +62,27 @@ return {
     keys = keys(),
   },
   {
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+    lazy = true,
+    keys = keys(),
+  },
+  {
+    "marko-cerovac/material.nvim",
+    name = "material",
+    lazy = true,
+    keys = keys(),
+  },
+  {
+    "Yazeed1s/oh-lucy.nvim",
+    name = "oh-lucy",
+    lazy = true,
+    keys = keys(),
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "onedark",
+      colorscheme = "material-palenight",
     },
   },
 }
