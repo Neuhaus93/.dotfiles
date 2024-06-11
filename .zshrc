@@ -136,7 +136,13 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# Cargo
 . "$HOME/.cargo/env"
 
+# Aliases
 alias vi="/opt/nvim-linux64/bin/nvim"
 alias vim="/usr/bin/vi"
+alias fd="fd --exclude timeshift/"
+
+# Other Env. Variables
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
