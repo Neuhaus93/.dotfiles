@@ -17,7 +17,7 @@ local function keys()
           end, target("", "color"))
         end
 
-        require("lazyvim.util").telescope("colorscheme", { enable_preview = true })()
+        require("lazyvim.util").pick("colorscheme", { enable_preview = true })()
         vim.fn.getcompletion = target
       end,
       desc = "Colorscheme with preview",

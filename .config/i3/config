@@ -57,7 +57,7 @@ bindsym $mod+q kill
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn 'pango-13:monospace' -nf '#C0FFFF' -nb '#0080C0' -sb '#005577' -sf '#C0FFC0'"
 
 # change focus
 bindsym $mod+h focus left
@@ -180,7 +180,7 @@ bar {
         font pango:monospace 11
 }
 
-# Start Vivaldi
+# Start Browser
 # use the same password-store as the linux mint password-store
 # bindsym $mod+c exec google-chrome --password-store=gnome-libsecret
 # Personal
@@ -243,3 +243,5 @@ for_window [class="floating_term"] floating enable, resize set 840 620, move pos
 # Default title bars for specific windows
 for_window [class="kitty"] border pixel 1
 for_window [class="Brave-browser"] border pixel 0
+for_window [class="Microsoft-edge"] border pixel 0
+for_window [class="Code"] border pixel 0
