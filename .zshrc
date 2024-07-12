@@ -107,9 +107,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# ASDF
-. "$HOME/.asdf/asdf.sh"
-
 # Add ~/.local/bin to $PATH
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -118,23 +115,11 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# bun completions
-[ -s "/home/neuhaus/.bun/_bun" ] && source "/home/neuhaus/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 # keychain manager
 eval $(keychain --eval --agents ssh --quick --quiet)
 
-# pnpm
-export PNPM_HOME="/home/neuhaus/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# Mise
+eval "$(~/.local/bin/mise activate zsh)"
 
 # Cargo
 . "$HOME/.cargo/env"
@@ -143,6 +128,7 @@ esac
 alias vi="/opt/nvim-linux64/bin/nvim"
 alias vim="/usr/bin/vi"
 alias fd="fd --exclude timeshift/"
+alias bat="batcat"
 
 # Other Env. Variables
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"

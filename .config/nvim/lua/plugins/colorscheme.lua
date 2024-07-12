@@ -44,12 +44,6 @@ return {
     keys = keys(),
   },
   {
-    "rebelot/kanagawa.nvim",
-    name = "kanagawa",
-    lazy = true,
-    keys = keys(),
-  },
-  {
     "Mofiqul/vscode.nvim",
     name = "vscode",
     lazy = true,
@@ -72,17 +66,31 @@ return {
     name = "material",
     lazy = true,
     keys = keys(),
-  },
-  {
-    "Yazeed1s/oh-lucy.nvim",
-    name = "oh-lucy",
-    lazy = true,
-    keys = keys(),
+    opts = {
+      contrast = {
+        terminal = true,
+        sidebars = true,
+        floating_windows = true,
+      },
+      styles = {
+        comments = {
+          italic = true,
+        },
+      },
+      plugins = {
+        "flash",
+        "neo-tree",
+        "noice",
+        "telescope",
+        "trouble",
+        "which-key",
+      },
+    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "material-palenight",
+      colorscheme = "material-darker",
     },
   },
 }
