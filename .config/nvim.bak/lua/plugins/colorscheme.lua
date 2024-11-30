@@ -38,8 +38,32 @@ return {
     keys = keys(),
   },
   {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    lazy = true,
+    keys = keys(),
+  },
+  {
+    "Mofiqul/vscode.nvim",
+    name = "vscode",
+    lazy = true,
+    keys = keys(),
+  },
+  {
     "navarasu/onedark.nvim",
     name = "onedark",
+    lazy = true,
+    keys = keys(),
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+    lazy = true,
+    keys = keys(),
+  },
+  {
+    "Mofiqul/dracula.nvim",
+    name = "dracula",
     lazy = true,
     keys = keys(),
   },

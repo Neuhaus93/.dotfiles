@@ -1,0 +1,15 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.coding.copilot-chat",
+    "lazyvim.plugins.extras.editor.outline",
+    "lazyvim.plugins.extras.lang.prisma",
+    "lazyvim.plugins.extras.lang.svelte",
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.typescript",
+    "lazyvim.plugins.extras.linting.eslint"
+  ],
+  "news": {
+    "NEWS.md": "6520"
+  },
+  "version": 6
+}
