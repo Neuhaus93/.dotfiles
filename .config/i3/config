@@ -183,10 +183,10 @@ bar {
 # Start Browser
 # use the same password-store as the linux mint password-store
 # bindsym $mod+c exec google-chrome --password-store=gnome-libsecret
+# BairesDev
+bindsym $mod+n exec /usr/bin/brave-browser-stable  --profile-directory="Default"
 # Personal
-bindsym $mod+n exec /usr/bin/vivaldi-stable --profile-directory="Default"
-# Work
-bindsym $mod+m exec /usr/bin/vivaldi-stable --profile-directory="Profile 1"
+bindsym $mod+m exec /usr/bin/brave-browser-stable --profile-directory="Profile 2"
 
 # starts picom compositor
 exec_always --no-startup-id picom -b
@@ -195,8 +195,8 @@ exec_always --no-startup-id picom -b
 exec_always --no-startup-id /usr/bin/flameshot &
 
 # gaps
-gaps inner 4
-gaps outer 4
+gaps inner 7
+gaps outer 2
 
 # wallpaper
 exec_always --no-startup-id /usr/bin/feh --bg-scale "$HOME/dotfiles/.config/i3/wallpaper.png"
@@ -235,7 +235,7 @@ mode "move" {
 
 # Default floating mode for specific windows
 for_window [class="zoom"] floating enable
-for_window [class="zoom" title="Zoom - Free account"] floating disable
+for_window [class="zoom" title="Zoom Workplace - Free account"] floating disable
 for_window [class="zoom" title="Zoom Meeting"] sticky enable
 for_window [class="Xviewer"] floating enable, resize set 1180 900, move position center
 for_window [class="floating_term"] floating enable, resize set 840 620, move position center
@@ -245,3 +245,6 @@ for_window [class="kitty"] border pixel 1
 for_window [class="Brave-browser"] border pixel 0
 for_window [class="Microsoft-edge"] border pixel 0
 for_window [class="Code"] border pixel 0
+
+# xset values
+exec_always --no-startup-id xset r rate 200 35
